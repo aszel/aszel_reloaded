@@ -1,60 +1,4 @@
-<!DOCTYPE HTML>
-
-<!--
-      ___           ___           ___           ___                   
-     /  /\         /  /\         /  /\         /  /\                  
-    /  /::\       /  /:/_       /  /::|       /  /:/_                 
-   /  /:/\:\     /  /:/ /\     /  /:/:|      /  /:/ /\    ___     ___ 
-  /  /:/~/::\   /  /:/ /::\   /  /:/|:|__   /  /:/ /:/_  /__/\   /  /\
- /__/:/ /:/\:\ /__/:/ /:/\:\ /__/:/ |:| /\ /__/:/ /:/ /\ \  \:\ /  /:/
- \  \:\/:/__\/ \  \:\/:/~/:/ \__\/  |:|/:/ \  \:\/:/ /:/  \  \:\  /:/ 
-  \  \::/       \  \::/ /:/      |  |:/:/   \  \::/ /:/    \  \:\/:/  
-   \  \:\        \__\/ /:/       |  |::/     \  \:\/:/      \  \::/   
-    \  \:\         /__/:/        |  |:/       \  \::/        \__\/    
-     \__\/         \__\/         |__|/         \__\/                  
-
--->
-
-<html data-ng-app="">
-<head>
-
-    <title>aszel power 3000</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-    <!-- vendor stylesheets -->
-    <link rel="stylesheet" href="assets/css/foundation.css" />
-    <link rel="stylesheet" href="assets/css/normalize.css">
-
-    <!-- custom stylesheet -->
-    <link rel="stylesheet" href="assets/css/app.css">
-
-    <!-- Latest jQuery -->
-    <script src="assets/js/jquery.js"></script>
-    
-    <script src="assets/js/modernizr.js"></script>
-
-</head>
-
-<body>
-
-    <header>
-
-        <h1>aszel power 3000</h1>
-        
-        <nav class="row mainnav">
-            <ul>
-                <li class="small-3 columns"><a href="">Home</a></li>
-                <li class="small-3 columns"><a href="">Clowns</a></li>
-                <li class="small-3 columns"><a href="">Beer</a></li>
-                <li class="small-3 columns"><a href="">Blog</a></li>
-            </ul>
-        </nav>
-
-    </header>
-
-    <section>
-        <div data-ng-view=""></div>
-        <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-4">
+<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-4">
     <li class="project_item">
         <h3>Website <b>Schombel</b>.de</h3>
 
@@ -202,31 +146,30 @@
         </div>
     </li>
 </ul>
-    </section>
+<script type="text/javascript">
 
-    <footer>
-        footer
-    </footer>
+    // both functions following are for image color fading in webkit browsers
+    $(".project_item").hover(function (){
+            var currentId = $(this).attr('id');
+            $("#" + currentId + " .item_content_left  img").css("-webkit-filter", "grayscale(0%)");
+        },function(){
+            var currentId = $(this).attr('id');
+            $("#" + currentId + " .item_content_left  img").css("-webkit-filter", "grayscale(100%)");
+        }
+    );
+
+    // prevent normal link function
+    $(".js_link").click(function(){
+        return false;
+    });
 
 
+    function openDialog() {
+        Avgrund.show( "#default-popup" );
+    }
 
-    <!-- Load the app related javascript -->
-    <script type="text/javascript" src="assets/js/angular.js"></script>
-    <script type="text/javascript" src="assets/js/angular-route.js"></script>
-    <script type="text/javascript" src="assets/js/angular-animation.js"></script>
+    function closeDialog() {
+        Avgrund.hide();
+    }
 
-
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/foundation.min.js"></script>
-    <script>
-        $(document).foundation();
-    </script>
-
-    <!--
-    <script type="text/javascript" src="app/app.js"></script>
-    <script type="text/javascript" src="app/controllers/PeopleController.js"></script>
-    <script type="text/javascript" src="app/factories/PeopleFactory.js"></script>
-    -->
-
-</body>
-</html> 
+</script>
