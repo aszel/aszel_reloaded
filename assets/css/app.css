@@ -38,7 +38,7 @@ table {
 /************************************** main navi */
 
 .mainnav {
-
+    margin-bottom: 2em;
 }
 
 .mainnav li {
@@ -52,49 +52,43 @@ table {
 }
 
 /*************************************************************** projects */
-#projects_wrap {
-    width: 1600px;
-    margin: 0 auto;
+.project_item {
+    padding: 0.2em;
 }
 
-div.project_item {
-    position: relative;
-    width: 24%;
-    min-height: 240px;
-    float: left;
-    margin-top: 1em;
-    margin-left: 1em;
+.item_content {
     border: 1px solid #ddd;
     border-radius: 3px;
     background: url(../img/subtle-pattern-11.jpg);
-    padding: 1em;
     transition: all 200ms ease;
+    padding: 0.4em;
+    min-height: 170px;
 }
 
-
-div.project_item:hover {
+.item_content:hover {
     border: 1px solid orange;
 }
 
-div.project_item .item_content_left {
+.item_content_left {
     float: left;
     height: 107px;
 }
 
-div.project_item .item_content_right {}
+.item_content_right {
+    
+}
 
-/* projects header */
-div.project_item h3 {
+.project_item h3 {
     font-size: 1.3em;
     padding-bottom: 1em;
     color: #4b4b4b;
 }
 
-div.project_item h3 b {
+.project_item h3 b {
     color: #DA431C;
 }
 
-div.project_item img {
+.project_item img {
     margin-right: 10px;
     width: 80px;
 
@@ -105,16 +99,16 @@ div.project_item img {
     transition: all 0.2s ease;
 }
 
-div.project_item .desc {}
+.project_item .desc {}
 
-div.project_item .read_more_button {
+.project_item .read_more_button {
     position: absolute;
     bottom: 0;
     right: 0;
     margin-right: 10px;
 }
 
-div.project_item .read_more_button a {
+.project_item .read_more_button a {
     text-decoration: none;
     color: white;
     border-top-left-radius: 5px;
@@ -125,6 +119,14 @@ div.project_item .read_more_button a {
     transition: 0.2s background-color ease;
 }
 
-div.project_item .read_more_button a:hover {
+.project_item .read_more_button a:hover {
     background-color: blue;
+}
+
+footer {
+    min-height: 430px;
+    background: #222 url(../img/pattern.svg);
+    position: relative;
+    color: #ececec;
+    clear: both;
 }
