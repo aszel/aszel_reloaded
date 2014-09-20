@@ -1,18 +1,13 @@
 <!DOCTYPE HTML>
 
 <!--
-      ___           ___           ___           ___                   
-     /  /\         /  /\         /  /\         /  /\                  
-    /  /::\       /  /:/_       /  /::|       /  /:/_                 
-   /  /:/\:\     /  /:/ /\     /  /:/:|      /  /:/ /\    ___     ___ 
-  /  /:/~/::\   /  /:/ /::\   /  /:/|:|__   /  /:/ /:/_  /__/\   /  /\
- /__/:/ /:/\:\ /__/:/ /:/\:\ /__/:/ |:| /\ /__/:/ /:/ /\ \  \:\ /  /:/
- \  \:\/:/__\/ \  \:\/:/~/:/ \__\/  |:|/:/ \  \:\/:/ /:/  \  \:\  /:/ 
-  \  \::/       \  \::/ /:/      |  |:/:/   \  \::/ /:/    \  \:\/:/  
-   \  \:\        \__\/ /:/       |  |::/     \  \:\/:/      \  \::/   
-    \  \:\         /__/:/        |  |:/       \  \::/        \__\/    
-     \__\/         \__\/         |__|/         \__\/                  
-
+ ________   ______     ______  ______   __          
+/_______/\ /_____/\   /_____/\/_____/\ /_/\         
+\::: _  \ \\::::_\/_  \:::__\/\::::_\/_\:\ \        
+ \::(_)  \ \\:\/___/\    /: /  \:\/___/\\:\ \       
+  \:: __  \ \\_::._\:\  /::/___ \::___\/_\:\ \____  
+   \:.\ \  \ \ /____\:\/_:/____/\\:\____/\\:\/___/\ 
+    \__\/\__\/ \_____\/\_______\/ \_____\/ \_____\/ 
 -->
 
 <html data-ng-app="aszelApp">
@@ -54,12 +49,29 @@
 
     </header>
 
-    <section>
-        <div data-ng-view=""></div>
+    <section class="content">
+        <div data-ng-view=""></div> 
     </section>
 
     <footer>
-        
+
+        <div class="row">
+            <div class="small-6 columns bio">
+                <h2>Hello!</h2>
+                <p>My name is Martin. I work at <a href="http://www.unbelievable-machine.com/" title="The Unbelievable Machine Company" target="_blank">*UM</a> in Berlin. </p>
+                
+            </div>
+
+            <div class="small-6 columns get-in-touch">
+                <h2>Get in touch</h2>
+                <p>You can find me on <a href="http://twitter.com/aszel">Twitter</a> and <a href="http://www.google.com/+martinbecker27">GitHub</a>.</p>
+            </div>
+      </div>
+      <div class="row">
+            <p class="impressum">Ordnung muss sein... <a href="#/impressum">Impressum</a></p>
+      </div>
+
+
     </footer>
 
 
@@ -76,8 +88,9 @@
 
     <!-- App -->
     <script type="text/javascript" src="app/app.js"></script>
+    <!--
     <script type="text/javascript" src="app/controllers/PeopleController.js"></script>
     <script type="text/javascript" src="app/factories/PeopleFactory.js"></script>
-
+    -->
 </body>
 </html> 

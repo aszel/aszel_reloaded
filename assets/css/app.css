@@ -47,8 +47,12 @@ table {
 
 .mainnav li a {
     display: block;
-    border: 1px solid grey;
     text-align: center;
+}
+
+.content {
+    width: 90%;
+    margin: 0 auto;
 }
 
 /*************************************************************** projects */
@@ -127,6 +131,43 @@ footer {
     min-height: 430px;
     background: #222 url(../img/pattern.svg);
     position: relative;
-    color: #ececec;
+    
     clear: both;
+    font-family: 'Myriad Pro', Helvetica, Arial, sans-serif;
+    font-size: 17px;
 }
+
+footer p, footer h2 {
+    color: #ececec;
+}
+
+footer .row {
+    padding-top: 80px;
+}
+
+footer .bio, footer .get-in-touch  {
+
+}
+
+footer .disclaimer {
+    font-size: 14px;
+    font-style: italic;
+    color: #aaa;
+    clear: both;
+    text-align: center;
+    padding-top: 50px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+footer .impressum {
+    font-size: 14px;
+    font-style: italic;
+    color: #aaa;
+    clear: both;
+    text-align: center;
+    padding-bottom: 50px;
+    width: 90%;
+    margin: 0 auto;
+}
+
