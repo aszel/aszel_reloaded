@@ -11,6 +11,10 @@ aszelApp.config(function ($routeProvider) {
             controller: 'AszelController',
             templateUrl: '/app/partials/clowns.html'
         })
+        .when('/beer', {
+            controller: 'AszelController',
+            templateUrl: '/app/partials/beer.html'
+        })
         .when('/disclaimer', {
             controller: 'AszelController',
             templateUrl: '/app/partials/impressum.html'
