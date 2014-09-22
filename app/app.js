@@ -4,19 +4,16 @@ var aszelApp = angular.module('aszelApp', ['ngRoute', 'ngAnimate']);
 aszelApp.config(function ($routeProvider) {
     $routeProvider
         .when('/', {
-            controller: 'AszelController',
             templateUrl: '/app/partials/projects.html'
         })
         .when('/clowns', {
-            controller: 'AszelController',
             templateUrl: '/app/partials/clowns.html'
         })
         .when('/beer', {
-            controller: 'AszelController',
+            controller: 'EventController',
             templateUrl: '/app/partials/beer.html'
         })
         .when('/disclaimer', {
-            controller: 'AszelController',
             templateUrl: '/app/partials/impressum.html'
         })
         .otherwise({
