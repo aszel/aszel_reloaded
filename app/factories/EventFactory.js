@@ -12,9 +12,6 @@ aszelApp.factory('EventFactory', function(){
 
         // all events
         var events = [];
-
-        // events per day
-        var eventsPerDay = [];
         var dayCounter = 0;
 
         var currentDate = getCurrentDate();
@@ -25,6 +22,8 @@ aszelApp.factory('EventFactory', function(){
             // console.log(data);
             var lastDate = "";
 
+            var eventsOfDay = [];
+
             // loop over all events from spreadsheet
             for (var i = 0; i < data.feed.entry.length; i++) {
 
@@ -33,10 +32,8 @@ aszelApp.factory('EventFactory', function(){
                 var weekday = getWeekDayAsWord(dateOfCurEvent);
 
                 console.log("date of current event: " + dateOfCurEvent);
-
                 // TODO - dayCounter hochzählen entsprechend der Anzahl der Tage zwischen den events wenn sie nicht an einem Tag stattfinden
-
-                eventsPerDay[dayCounter] =
+                events[i] =
                 {
                     weekday: weekday,
                     date: dateOfCurEvent,
@@ -49,9 +46,11 @@ aszelApp.factory('EventFactory', function(){
                     end: data.feed.entry[i]['gsx$end']['$t'],
                     artists: data.feed.entry[i]['gsx$artists']['$t']
                 };
+                //events.push(eventsOfDay);
+                dayCounter++;
             }
 
-            $scope.events = eventsPerDay;
+            $scope.events = events;
         })
         .error(function(data, status, headers, config) {
             console.log("Cannot retrieve data from spreadsheet. " + status);
@@ -72,7 +71,7 @@ aszelApp.factory('EventFactory', function(){
         var day = d.getUTCDate();
         day = day < 10 ? '0' + day : day;
         var result = year +''+ month +''+ day;
-        console.log(result);
+        //console.log(result);
         return result;
     }
 
@@ -99,7 +98,7 @@ aszelApp.factory('EventFactory', function(){
         weekday[4] = "Thursday";
         weekday[5] = "Friday";
         weekday[6] = "Saturday";
-        console.log("Name of day " + datestring + " : " + weekday[d.getDay()]);
+        //console.log("Name of day " + datestring + " : " + weekday[d.getDay()]);
         return weekday[d.getDay()];
     }
 
