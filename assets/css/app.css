@@ -127,6 +127,15 @@ table {
     background-color: blue;
 }
 
+/**************************************events*/
+.day-event-item {
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.day-event-item:last-child {
+    border-bottom: none;
+}
+
 footer {
     min-height: 430px;
     background: #222 url(../img/pattern.svg);

@@ -10,7 +10,14 @@ aszelApp.factory('EventFactory', function(){
         var sourceDocId = "1IXhweO516ri1aKhJAU7iWgE0ke8fJK4h-V_88nebGFM";
         var url = 'https://spreadsheets.google.com/feeds/list/' + sourceDocId + '/od6/public/values?alt=json';
 
+        // all events
         var events = [];
+
+        // events per day
+        var eventsPerDay = [];
+        var dayCounter = 0;
+        var currentDate = getCurrentDate();
+        console.log(year +''+ month +''+ day);
 
         $http.get(url)
         .success(function(data, status, headers, config) {
@@ -19,7 +26,7 @@ aszelApp.factory('EventFactory', function(){
 
             for (var i = 0; i < data.feed.entry.length; i++) {
 
-                events.push(
+                eventsPerDay[dayCounter] =
                 {
                     date: data.feed.entry[i]['gsx$date']['$t'],
                     time: data.feed.entry[i]['gsx$time']['$t'],
@@ -30,10 +37,10 @@ aszelApp.factory('EventFactory', function(){
                     tags: data.feed.entry[i]['gsx$tags']['$t'],
                     end: data.feed.entry[i]['gsx$end']['$t'],
                     artists: data.feed.entry[i]['gsx$artists']['$t']
-                });
+                };
             }
 
-            $scope.events = events;
+            $scope.events = eventsPerDay;
         })
         .error(function(data, status, headers, config) {
             console.log("Cannot retrieve data from spreadsheet. " + status);
@@ -41,6 +48,18 @@ aszelApp.factory('EventFactory', function(){
 
         return events;
     };
+
+    /**
+     * Function returns the current date in format 141212
+     * @return {String}
+     */
+    function getCurrentDate() {
+        var d = new Date();
+        var year = d.getFullYear();
+        var month = d.getMonth()+1;
+        var day = d.getDate();
+        return year +''+ month +''+ day;
+    }
 
     return factory;
 });
