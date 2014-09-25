@@ -13,6 +13,10 @@ aszelApp.config(function ($routeProvider) {
             controller: 'EventController',
             templateUrl: '/app/partials/beer.html'
         })
+        .when('/blog', {
+            controller: 'TumblrController',
+            templateUrl: '/app/partials/blog.html'
+        })
         .when('/disclaimer', {
             templateUrl: '/app/partials/impressum.html'
         })
