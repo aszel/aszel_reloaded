@@ -6,7 +6,6 @@
     margin:0;
     padding:0;
     list-style: none;
-    border: 0;
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
@@ -50,10 +49,6 @@ body:after {
     margin-bottom: 2em;
 }
 
-.mainnav li {
-
-}
-
 .mainnav li a {
     display: block;
     text-align: center;
@@ -87,10 +82,6 @@ body:after {
     height: 107px;
 }
 
-.item_content_right {
-    
-}
-
 .project_item h3 {
     font-size: 1.3em;
     padding-bottom: 1em;
@@ -111,8 +102,6 @@ body:after {
     -webkit-backface-visibility: hidden; /* Fix for transition flickering */
     transition: all 0.2s ease;
 }
-
-.project_item .desc {}
 
 .project_item .read_more_button {
     position: absolute;
@@ -137,19 +126,33 @@ body:after {
 }
 
 /**************************************events*/
-.day-event-item {
+.event_item {
     border-bottom: 1px solid #e3e3e3;
+    line-height: 1.15em;
+    padding-bottom: .3em;
+    margin-bottom: .3em;
 }
 
-.day-event-item:last-child {
-    border-bottom: none;
+.event_item .tags {
+    text-align: right;
+    color: #e3e3e3;
+}
+
+.event_item .tags a {
+    color: #e3e3e3;
+}
+
+.event_item .tags span a:hover,
+.event_item .tags span a:active,
+.event_item .tags span a:focus {
+    color: white;
+    background-color: #e3e3e3;
 }
 
 footer {
     min-height: 430px;
     background: #222 url(../img/pattern.svg);
     position: relative;
-    
     clear: both;
     font-family: 'Myriad Pro', Helvetica, Arial, sans-serif;
     font-size: 17px;
@@ -161,10 +164,6 @@ footer p, footer h2 {
 
 footer .row {
     padding-top: 80px;
-}
-
-footer .bio, footer .get-in-touch  {
-
 }
 
 footer .disclaimer {
@@ -188,4 +187,3 @@ footer .impressum {
     width: 90%;
     margin: 0 auto;
 }
-
