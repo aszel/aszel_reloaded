@@ -34,15 +34,24 @@ table {
     border-spacing: 0;
 }
 
+/* colored line on top of page*/
+body:after {
+    width: 100%;
+    height: 5px;
+    top: 0;
+    position: absolute;
+    left: 0;
+    content: '';
+    background: linear-gradient(to right,#fff 0,#0085b2 33%,#ff007f 66%,#000 100%);
+}
 
 /************************************** main navi */
-
 .mainnav {
     margin-bottom: 2em;
 }
 
 .mainnav li {
-    
+
 }
 
 .mainnav li a {
