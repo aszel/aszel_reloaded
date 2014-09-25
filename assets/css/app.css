@@ -44,7 +44,7 @@ body:after {
     background: linear-gradient(to right,#fff 0,#0085b2 33%,#ff007f 66%,#000 100%);
 }
 
-/************************************** main navi */
+/*************************************************************** main navi */
 .mainnav {
     margin-bottom: 2em;
 }
@@ -131,6 +131,23 @@ body:after {
     line-height: 1.15em;
     padding-bottom: .3em;
     margin-bottom: .3em;
+}
+
+.club_img_wrapper img {
+    border: 1px solid transparent;
+}
+
+.club_img_wrapper img:hover,
+.club_img_wrapper img:active,
+.club_img_wrapper img:focus {
+    border: 1px solid #008cba;
+}
+
+.event_item a:hover,
+.event_item a:active,
+.event_item a:focus {
+    color: white;
+    background-color: #008cba;
 }
 
 .event_item .tags {

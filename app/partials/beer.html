@@ -1,13 +1,13 @@
-<ul class="small-block-grid-1 events-list">
-    <li class="events-item">
-        <ul class="day-events-list" data-ng-repeat="event in events">
-            <li class="row event_item">
-                <div class="small-2 columns club_img_wrapper">
-                    <img src="assets/img/clubs/{{event.place}}.jpg" alt="">
+<ul class='small-block-grid-1 events-list'>
+    <li class='events-item'>
+        <ul class='day-events-list' data-ng-repeat='event in events'>
+            <li class='row event_item'>
+                <div class='show-for-medium-up medium-2 columns club_img_wrapper'>
+                    <a href='' title='' target='_blank'><img src='assets/img/clubs/{{event.place}}.jpg' alt=''></a>
                 </div>
-                <div class='small-10 columns clubname_title_wrapper'>
+                <div class='small-12 medium-10 columns clubname_title_wrapper'>
                     <div class='title'>
-                        <a href='' title=''>{{event.title}}</a>
+                        <a href='{{event.link}}' title='' target='_blank'>{{event.title}}</a>
                     </div>
                     <div class='clubname'>
                         at <a href='' title=''>{{event.place}}</a>
@@ -23,7 +23,7 @@
                             {{event.weekday}} {{event.time}} | {{event.entryfee}} euros
                         </div>
                         <div class='medium-6 columns tags'>
-                            <span><a href="">{{event.tags}}</a></span>
+                            <span><a href=''>{{event.tags}}</a></span>
                         </div>
                     </div>
                 </div>
