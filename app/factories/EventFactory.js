@@ -44,7 +44,8 @@ aszelApp.factory('EventFactory', function(){
                     entryfee: data.feed.entry[i]['gsx$entryfee']['$t'],
                     tags: data.feed.entry[i]['gsx$tags']['$t'],
                     end: data.feed.entry[i]['gsx$end']['$t'],
-                    artists: data.feed.entry[i]['gsx$artists']['$t']
+                    artists: data.feed.entry[i]['gsx$artists']['$t'],
+                    link: data.feed.entry[i]['gsx$link']['$t'],
                 };
                 //events.push(eventsOfDay);
                 dayCounter++;
