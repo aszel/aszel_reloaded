@@ -1,14 +1,14 @@
 function TumblrController($scope, $http, TumblrFactory) {
 
     // define events
-    $scope.sketches = [];
+    $scope.sketchUrls = [];
 
     // and call init
     init();
 
     // get the data from the factory
     function init() {
-        $scope.sketches = TumblrFactory.getSketches($scope, $http);
+        $scope.sketchUrls = TumblrFactory.getSketches($scope, $http);
     }
 }
 

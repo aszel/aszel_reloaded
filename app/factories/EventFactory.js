@@ -16,7 +16,7 @@ aszelApp.factory('EventFactory', function(){
 
         var currentDate = getCurrentDate();
 
-        $http.get(url)
+        $http.jsonp(url)
         .success(function(data, status, headers, config) {
 
             // console.log(data);

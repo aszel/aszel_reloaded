@@ -125,7 +125,7 @@ body:after {
 }
 
 /**************************************events*/
-.repeated_item.ng-enter {
+.repeated_item .ng-enter {
     -webkit-transition:0.2s linear all;
     -moz-transition:0.2s linear all;
     -o-transition:0.2s linear all;
