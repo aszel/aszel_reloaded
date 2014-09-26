@@ -41,7 +41,7 @@ body:after {
     position: absolute;
     left: 0;
     content: '';
-    background: linear-gradient(to right,#fff 0,#0085b2 33%,#ff007f 66%,#000 100%);
+    background: linear-gradient(to right,#fff 0,orange 33%,#DA431C 66%,#000 100%);
 }
 
 /*************************************************************** main navi */
@@ -67,7 +67,6 @@ body:after {
 .item_content {
     border: 1px solid #ddd;
     border-radius: 3px;
-    background: url(../img/subtle-pattern-11.jpg);
     transition: all 200ms ease;
     padding: 0.4em;
     min-height: 170px;
