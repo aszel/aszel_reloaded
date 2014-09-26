@@ -125,6 +125,55 @@ body:after {
 }
 
 /**************************************events*/
+.repeated_item.ng-enter {
+    -webkit-transition:0.2s linear all;
+    -moz-transition:0.2s linear all;
+    -o-transition:0.2s linear all;
+    transition:0.2s linear all;
+    opacity:0;
+}
+
+.repeated_item .ng-enter .ng-enter-active,
+.repeated_item .ng-move .ng-move-active {
+    opacity:1;
+}
+
+/*
+ We're using CSS keyframe animations for when
+ the leave event is triggered for the element
+ that has the .repeated-item class
+*/
+.repeated_item .ng-leave {
+ -webkit-animation:0.2s my_animation;
+ -moz-animation:0.2s my_animation;
+ -o-animation:0.2s my_animation;
+ animation:0.2s my_animation;
+}
+
+@keyframes my_animation {
+ from { opacity:1; }
+ to { opacity:0; }
+}
+
+/*
+ Unfortunately each browser vendor requires
+ its own definition of keyframe animation code...
+*/
+@-webkit-keyframes my_animation {
+ from { opacity:1; }
+ to { opacity:0; }
+}
+
+@-moz-keyframes my_animation {
+ from { opacity:1; }
+ to { opacity:0; }
+}
+
+@-o-keyframes my_animation {
+ from { opacity:1; }
+ to { opacity:0; }
+}
+
 .event_item {
     border-bottom: 1px solid #e3e3e3;
     line-height: 1.15em;
