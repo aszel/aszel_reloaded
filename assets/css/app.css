@@ -11,6 +11,10 @@
     vertical-align: baseline;
 }
 
+body {
+    /*background: url("../img/bg-sunset.jpg") no-repeat center center fixed;*/
+}
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -212,6 +216,18 @@ body:after {
 .event_item .tags span a:focus {
     color: white;
     background-color: #e3e3e3;
+}
+
+/********************************************************* blog */
+.sketch_list_item a img {
+    border: 2px solid transparent;
+    transition: 0.1s border-color ease;
+}
+
+.sketch_list_item a img:hover,
+.sketch_list_item a img:active,
+.sketch_list_item a img:focus {
+    border: 2px solid orange;
 }
 
 footer {
