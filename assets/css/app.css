@@ -48,6 +48,11 @@ body:after {
     background: linear-gradient(to right,#fff 0,orange 33%,#DA431C 66%,#000 100%);
 }
 
+.headline {
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
 /*************************************************************** main navi */
 .mainnav {
     margin-bottom: 2em;
@@ -56,9 +61,10 @@ body:after {
 .mainnav li a {
     display: block;
     text-align: center;
+    font-size: 25px;
 }
 
-.content {
+.partial {
     width: 90%;
     margin: 0 auto;
 }
