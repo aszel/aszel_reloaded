@@ -31,7 +31,7 @@ aszelApp.factory('EventFactory', function(){
                 var dateOfCurEvent = data.feed.entry[i]['gsx$date']['$t'];
                 var weekday = getWeekDayAsWord(dateOfCurEvent);
 
-                console.log("date of current event: " + dateOfCurEvent);
+                //console.log("date of current event: " + dateOfCurEvent);
                 // TODO - dayCounter hochzählen entsprechend der Anzahl der Tage zwischen den events wenn sie nicht an einem Tag stattfinden
                 events[i] =
                 {
