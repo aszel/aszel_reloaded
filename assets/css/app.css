@@ -12,7 +12,13 @@
 }
 
 body {
-    /*background: url("../img/bg-sunset.jpg") no-repeat center center fixed;*/
+    /*background: url("../img/bg-sunset.jpg") no-repeat center center fixed;
+    background: url("../img/bg-koreanborder.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    */
 }
 
 /* HTML5 display-role reset for older browsers */
