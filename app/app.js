@@ -23,6 +23,12 @@ aszelApp.config(function ($routeProvider) {
         .when('/disclaimer', {
             templateUrl: '/app/partials/impressum.html'
         })
+        .when('/games', {
+            templateUrl: '/app/partials/games.html'
+        })
+        .when('/links', {
+            templateUrl: '/app/partials/links.html'
+        })
         .otherwise({
             templateUrl: '/app/partials/404.html'
         });
