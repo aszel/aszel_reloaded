@@ -242,6 +242,21 @@ body:after {
     border: 2px solid orange;
 }
 
+/*************************************************************** links */
+.link_list {
+    margin: 0;
+}
+
+.link_list .link_list_item a {
+    display: block;
+    padding: 1em;
+}
+
+.link_list .link_list_item a:hover {
+    background-color: orange;
+    transition: 0.1s background-color ease;
+}
+
 footer {
     min-height: 430px;
     background: #222 url(../img/pattern.svg);
