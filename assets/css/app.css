@@ -73,8 +73,8 @@ body:after {
 .mainnav li a {
     display: block;
     text-align: center;
-    font-size: 25px;
-    padding: 1em 0;
+    
+    
     transition: all linear 0.1s;
     color: #222;
 }
@@ -83,7 +83,48 @@ body:after {
 .mainnav li a:active,
 .mainnav li a:focus {
     background-color: orange;
-}   
+}
+
+/* Small screens */
+/* max-width 640px, mobile-only styles, use when QAing mobile issues */
+@media only screen {
+    .menu-button {
+        margin: .5em;
+    }
+    
+    .mainnav {
+        max-width: 90%;
+    }
+    
+    .mainnav li a {
+        font-size: 15px;
+        padding: 1em 0;
+    }
+} 
+
+/* Medium screens */
+/* min-width 641px, medium screens */
+@media only screen and (min-width: 40.063em) {
+    .mainnav {
+        max-width: 80%;
+    }
+
+    .mainnav li a {
+        font-size: 17px;
+    }
+}
+
+/* Large screens */
+/* min-width 1025px, large screens */
+@media only screen and (min-width: 64.063em) {
+    .mainnav {
+        max-width: 70%;
+    }
+
+    .mainnav li a {
+        font-size: 20px;
+    }
+}
 
 /*************************************************************** partial container */
 .partial {
