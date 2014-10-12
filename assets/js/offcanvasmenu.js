@@ -14,6 +14,9 @@
 		content = document.querySelector( '.content-wrap' ),
 		openbtn = document.getElementById( 'open-button' ),
 		closebtn = document.getElementById( 'close-button' ),
+		link1 = document.getElementById( 'offcanvasmenu-link-1' ),
+		link2 = document.getElementById( 'offcanvasmenu-link-2' ),
+		link3 = document.getElementById( 'offcanvasmenu-link-3' ),
 		isOpen = false,
 
 		morphEl = document.getElementById( 'morph-shape' ),
@@ -29,11 +32,15 @@
 
 	function initEvents() {
 		openbtn.addEventListener( 'click', toggleMenu );
+		link1.addEventListener( 'click', toggleMenu );
+		link2.addEventListener( 'click', toggleMenu );
+		link3.addEventListener( 'click', toggleMenu );
+
 		if( closebtn ) {
 			closebtn.addEventListener( 'click', toggleMenu );
 		}
 
-		// close the menu element if the target it´s not the menu element or one of its descendants..
+		// close the menu element if the target is not the menu element or one of its descendants..
 		content.addEventListener( 'click', function(ev) {
 			var target = ev.target;
 			if( isOpen && target !== openbtn ) {
@@ -43,8 +50,12 @@
 	}
 
 	function toggleMenu() {
-		if( isAnimating ) return false;
+		if( isAnimating ) {
+			return false;
+		}
+
 		isAnimating = true;
+
 		if( isOpen ) {
 			classie.remove( bodyEl, 'show-menu' );
 			// animate path
