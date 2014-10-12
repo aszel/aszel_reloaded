@@ -64,7 +64,6 @@ body:after {
     margin-bottom: 2em;
 }
 
-
 .mainnav li {
     border-bottom: 1px solid #222;
     border-left: 1px solid #222;
@@ -163,7 +162,7 @@ body:after {
     background-color: blue;
 }
 
-/**************************************events*/
+/*************************************************************** dates */
 .repeated_item .ng-enter {
     -webkit-transition:0.2s linear all;
     -moz-transition:0.2s linear all;
