@@ -12,9 +12,9 @@ aszelApp.config(function ($routeProvider) {
         .when('/writing', {
             templateUrl: '/app/partials/writing.html'
         })
-        .when('/beer', {
+        .when('/dates', {
             controller: 'EventController',
-            templateUrl: '/app/partials/beer.html'
+            templateUrl: '/app/partials/dates.html'
         })
         .when('/sketches', {
             controller: 'TumblrController',
