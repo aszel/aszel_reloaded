@@ -65,16 +65,12 @@ body:after {
 }
 
 .mainnav li {
-    border-bottom: 1px solid #222;
-    border-left: 1px solid #222;
     padding: 0;
 }
 
 .mainnav li a {
     display: block;
     text-align: center;
-    
-    
     transition: all linear 0.1s;
     color: #222;
 }
@@ -91,16 +87,16 @@ body:after {
     .menu-button {
         margin: .5em;
     }
-    
+
     .mainnav {
         max-width: 90%;
     }
-    
+
     .mainnav li a {
         font-size: 15px;
         padding: 1em 0;
     }
-} 
+}
 
 /* Medium screens */
 /* min-width 641px, medium screens */
