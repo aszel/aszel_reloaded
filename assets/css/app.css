@@ -259,7 +259,7 @@ body:after {
 
 .link_list .link_list_item a {
     display: block;
-    padding: 1em;
+    padding: .3em 1em;
 }
 
 .link_list .link_list_item a:hover {
@@ -268,7 +268,6 @@ body:after {
 }
 
 footer {
-    min-height: 430px;
     background: #222 url(../img/pattern.svg);
     position: relative;
     clear: both;
